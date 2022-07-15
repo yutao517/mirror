@@ -22,7 +22,7 @@ RUN set -ex; \
     useradd admin &&\
     echo admin:admin | chpasswd &&\
     mkdir /home/admin  &&\
-    chown admin /home/admin -R 
+    chown admin /home/admin -R &&\
     chown admin /jupyterhub/study -R 
 COPY jupyterhub_config.py /jupyterhub
 COPY jupyterhub.yutao.co.key /jupyterhub
