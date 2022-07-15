@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jupyterhub
+spec:
+  selector:
+    matchLabels:
+      run: jupyterhub
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: jupyterhub
+    spec:
+      containers:
+      - name: jupyterhub
+        image: registry.cn-hangzhou.aliyuncs.com/yutao517/jupyterhub
+        ports:
+        - containerPort: 8000

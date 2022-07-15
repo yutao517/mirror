@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jupyterhub
+  namespace: default
+spec:
+  tls:
+  - hosts:
+    - hub.jupyter.com
+    secretName: secret-https
+  ingressClassName: nginx
+  rules:
+    - host: hub.jupyter.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: jupyterhub
+                port:
+                  number: 8000
