@@ -1,1 +1,1 @@
-FROM codercom/coder:1.32.0
+FROM opencurvedocker/curvebs:v1.2
