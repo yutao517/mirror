@@ -1,1 +1,1 @@
-FROM opencurvedocker/curvebs:v1.2
+FROM opencurvedocker/curvefs:latest
