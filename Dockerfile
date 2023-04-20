@@ -1,1 +1,1 @@
-FROM opencurvedocker/curvefs:latest
+FROM centos
